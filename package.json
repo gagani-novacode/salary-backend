@@ -1,6 +1,7 @@
 {
   "name": "salary-system-backend",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "Multi-Company Salary System Backend API",
   "main": "dist/server.js",
   "scripts": {
