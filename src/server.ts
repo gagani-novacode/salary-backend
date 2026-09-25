@@ -1,7 +1,7 @@
-// Must be the very first lines — set DNS before any network activity
-//import dns from "dns";
-//dns.setDefaultResultOrder("ipv4first");
-//dns.setServers(["8.8.8.8", "8.8.4.4", "1.1.1.1"]);
+import dns from "dns";
+dns.setDefaultResultOrder("ipv4first");
+dns.setServers(["8.8.8.8", "8.8.4.4", "1.1.1.1"]);
+
 
 import express from "express";
 import cors from "cors";

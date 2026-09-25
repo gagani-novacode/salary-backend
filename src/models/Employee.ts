@@ -6,6 +6,7 @@ export interface IEmployee extends Document {
   employeeNo: string;
   name: string;
   designation: string;
+  nic: string;
   department: string;
   basicSalary: number;
   entitledHolidays: number;
@@ -23,6 +24,7 @@ const employeeSchema = new Schema<IEmployee>(
     employeeNo: { type: String, required: true, trim: true },
     name: { type: String, required: true, trim: true },
     designation: { type: String, required: true, default: "Staff" },
+    nic: { type: String, trim: true },
     department: { type: String, default: "General" },
     basicSalary: { type: Number, required: true, default: 0 },
     entitledHolidays: { type: Number, default: 14 },

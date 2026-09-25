@@ -28,7 +28,7 @@ export const getEmployeeById = async (req: AuthRequest, res: Response): Promise<
 
 export const createEmployee = async (req: AuthRequest, res: Response): Promise<void> => {
   try {
-    const { companyId, employeeNo, name, designation, department, basicSalary, entitledHolidays, epfEligible, etfEligible, joiningDate } = req.body;
+    const { companyId, employeeNo, name, nic, designation, department, basicSalary, entitledHolidays, epfEligible, etfEligible, joiningDate } = req.body;
     if (!companyId || !employeeNo || !name || basicSalary === undefined) {
       res.status(400).json({ success: false, message: "Company ID, Employee No, Name, and Basic Salary are required" });
       return;
@@ -44,6 +44,7 @@ export const createEmployee = async (req: AuthRequest, res: Response): Promise<v
       companyId,
       employeeNo,
       name,
+      nic: nic || "",
       designation: designation || "Staff",
       department: department || "General",
       basicSalary: Number(basicSalary),
