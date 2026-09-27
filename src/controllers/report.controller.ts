@@ -760,7 +760,7 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
       <!-- Instruction Notice -->
       <div class="notice-banner">
         <div>මෙම වාර්තාව නිසි ලෙස පුරවා දායක දීමනා සමඟ සේවක අර්ථසාධක අරමුදල් අධිකාරී වෙත එවිය යුතුය.</div>
-        <div>This form should be returned duly completed along with the contributions to the Superintendent/PDF</div>
+        <div>This form should be returned duly completed along with the contributions to the Superintendent.</div>
       </div>
 
       <!-- Data Table -->
@@ -891,9 +891,14 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
         await browser.close().catch(() => { });
       }
     }
-  } catch (error) {
+  } catch (error: any) {
     console.error("EPF C Form Generation Error:", error);
-    res.status(500).json({ error: "Failed to generate EPF C Form" });
+
+    res.status(500).json({
+      success: false,
+      error: error?.message || "Failed to generate EPF C Form",
+    });
+
     return;
   }
 };
