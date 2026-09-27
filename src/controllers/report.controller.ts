@@ -629,7 +629,7 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
   .cbsl-block .cbsl-bank { font-size: 13px; }
   .cbsl-contacts { display: flex; justify-content: space-between; margin-top: 6px; font-size: 9px; text-align: left; line-height: 1.5; }
   .cheque-block { margin-top: 8px; font-size: 13px; line-height: 1.6; color: #000; }
-  .notice-banner { text-align: center; font-size: 13px; line-height: 1.5; margin: 10px 0 8px 0; color: #000; }
+  .notice-banner { text-align: center; font-size: 12px; line-height: 1.5; margin: 10px 0 8px 0; color: #000; }
 
   .data-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 14px; }
   .data-table th, .data-table td { border: 1.5px solid #000; padding: 5px 3px; height: 22px; }
@@ -641,7 +641,7 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
   .rupees-cell { text-align: right; width: 68%; border-right: 1px solid #000 !important; padding-right: 4px !important; }
   .cents-cell { text-align: center; width: 32%; }
 
-  .footer-section { margin-top: 16px; font-size: 13px; }
+  .footer-section { margin-top: 16px; font-size: 12px; }
   .signature-line { margin-top: 22px; border-top: 1px dotted #000; width: 220px; text-align: center; }
 </style>
     </head>
@@ -825,11 +825,11 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
   <div style="display: flex; justify-content: space-between; margin-top: 14px;">
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div class="signature-line"></div>
-      <p style="margin-top: 3px; font-weight: bold; text-align: center;">සේව්‍යයාගේ අත්සන / Signature of Employer</p>
-      <p style="margin-top: 0px; text-align: center; font-size: 12px;">දුරකථන අංකය / Telephone No.</p>
+      <p style="margin-top: 3px; font-weight: bold; text-align: center; font-size: 10px;">සේව්‍යයාගේ අත්සන / Signature of Employer</p>
+      <p style="margin-top: 0px; text-align: center; font-size: 10px;">දුරකථන අංකය / Telephone No.</p>
     </div>
-    <div style="text-align: right; font-size: 12px;">
-  <table style="margin-left: auto; border-collapse: collapse;">
+    <div style="text-align: right; font-size: 9px;">
+      <table style="margin-left: auto; border-collapse: collapse;">
     <tr>
       <td style="margin-right:10px;">Telephone : ${company.telephone}</td>
       <td style="padding: 1px 0;">ටෙලිෆෝන්</td>
@@ -839,7 +839,7 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
       <td style="padding: 1px 0;">ෆැක්ස් :</td>
     </tr>
     <tr>
-      <td style="margin-right:10px;">E - mail</td>
+      <td style="margin-right:18px;">E - mail</td>
     </tr>
   </table>
 </div>
