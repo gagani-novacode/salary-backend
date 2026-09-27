@@ -607,7 +607,7 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
   body { font-family: 'Noto Sans Sinhala', 'Arial', sans-serif; font-size: 14px; color: #000; margin: 0; }
   
   .top-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-  .black-badge { background: #000; color: #fff; padding: 5px 20px; font-weight: bold; font-size: 17px; }
+  .black-badge { background: #000; color: #fff; padding: 5px 20px; font-weight: bold; font-size: 14px; }
   
   .c-form-header-box { border: 1.5px solid #000; padding: 4px 12px; display: flex; align-items: center; gap: 10px; }
   .c-letter { font-size: 44px; font-weight: bold; line-height: 1; font-family: Arial, sans-serif; }
@@ -627,7 +627,7 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
   .cbsl-block .cbsl-center-address { text-align: center; margin: 2px 0; }
   .cbsl-block .cbsl-dept { font-size: 13px; font-weight: bold; }
   .cbsl-block .cbsl-bank { font-size: 13px; }
-  .cbsl-contacts { display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; text-align: left; line-height: 1.5; }
+  .cbsl-contacts { display: flex; justify-content: space-between; margin-top: 6px; font-size: 9px; text-align: left; line-height: 1.5; }
   .cheque-block { margin-top: 8px; font-size: 13px; line-height: 1.6; color: #000; }
   .notice-banner { text-align: center; font-size: 13px; line-height: 1.5; margin: 10px 0 8px 0; color: #000; }
 
@@ -649,8 +649,8 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
 
       <!-- Top Row -->
       <div class="top-header">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; margin-left: 45px;">
-    <div style="font-weight: bold; font-size: 16px; margin-bottom: 3px;">රා.සේ.පි.</div>
+  <div style="display: flex; flex-direction: column; align-items: flex-end; margin-left: 42px;">
+    <div style="font-weight: bold; font-size: 14px; margin-bottom: 3px;">රා.සේ.පි.</div>
     <div class="black-badge">තැපැල් ගාස්තු ගෙවන ලදී එ - 13</div>
   </div>
         <div class="c-form-header-box">
@@ -689,11 +689,11 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
                 16925.00 &nbsp;} 2206651
               </div>
               <div style="text-align: left;">
-    ටෙලිෆෝන් } 2206645<br/>
-    ෆැක්ස් &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 2206651<br/>
-    ඊ - මේල් : epfhelpdesk@cbsl.lk<br/>
-    වෙබ් &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: www.epf.lk
-  </div>
+                  ටෙලිෆෝන් } 2206645<br/>
+                  ෆැක්ස් &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 2206651<br/>
+                  ඊ - මේල් : epfhelpdesk@cbsl.lk<br/>
+                  වෙබ් &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: www.epf.lk
+              </div>
             </div>
           </div>
         </div>
@@ -702,15 +702,15 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
         <div class="right-col">
           <table class="epf-meta-table">
             <tr>
-              <td style="font-size: 12px;">සේ.අ.අ. සේව්‍යය අංකය<br/><b>E.P.F. Registration No.</b></td>
-              <td style="font-size: 14px; font-weight: bold; text-align: center;">${company.epfRegNo}</td>
+              <td style="font-size: 10px;">සේ.අ.අ. සේව්‍යය අංකය<br/><b>E.P.F. Registration No.</b></td>
+              <td style="font-size: 10px; font-weight: bold; text-align: center;">${company.epfRegNo}</td>
             </tr>
             <tr>
               <td style="font-size: 10px;">දායක දීමනා ගෙවනු ලබන වර්ෂය සහ මාසය<br/><b>Month and Year of Contribution</b></td>
-              <td style="font-size: 12px; font-weight: bold; text-align: center;">${periodString}</td>
+              <td style="font-size: 10px; font-weight: bold; text-align: center;">${periodString}</td>
             </tr>
             <tr>
-              <td style="font-size: 12px;">දායක මුදල් / <b>Contributions</b></td>
+              <td style="font-size: 10px;">දායක මුදල් / <b>Contributions</b></td>
               <td style="padding:0;">
                 <table style="width:100%; height:100%; border-collapse:collapse;">
                   <tr>
@@ -721,18 +721,18 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
               </td>
             </tr>
             <tr>
-              <td style="font-size: 12px;">දඩ මුදල් / <b>Surcharges</b></td>
+              <td style="font-size: 10px;">දඩ මුදල් / <b>Surcharges</b></td>
               <td style="padding:0;">
                 <table style="width:100%; height:100%; border-collapse:collapse;">
                   <tr>
                     <td class="rupees-cell" style="border:none; border-right:1px solid #000 !important;"></td>
-                    <td class="cents-cell" style="border:none; font-size:12px;">${splitCurrency(grandTotals.total).c}</td>
+                    <td class="cents-cell" style="border:none; font-size:10px;">${splitCurrency(grandTotals.total).c}</td>
                   </tr>
                 </table>
               </td>
             </tr>
             <tr>
-              <td style="font-size: 12px;">මුළු ගෙවීම් / <b>Total Remittance</b></td>
+              <td style="font-size: 10px;">මුළු ගෙවීම් / <b>Total Remittance</b></td>
               <td style="padding:0;">
                 <table style="width:100%; height:100%; border-collapse:collapse;">
                   <tr>
@@ -745,14 +745,14 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
           </table>
 
           <div class="cheque-block">
-            <div style="font-size: 10.5px;">චෙක්පත් අංකය</div>
+            <div style="font-size: 9px;">චෙක්පත් අංකය</div>
             <div style="font-size: 9px;">Cheque No. ............................................................................</div>
-            <div style="font-size: 1.5px; margin-top: 2px;">බැංකුවෙහි නම හා ශාඛාවෙහි නම</div>
+            <div style="font-size: 9px; margin-top: 2px;">බැංකුවෙහි නම හා ශාඛාවෙහි නම</div>
             <div style="font-size: 9px;">Bank Name and Branch Name .............................................................</div>
-            <div style="text-align: right; font-size: 14px; margin-top: 6px;">
-  <div>පිටු අංකය</div>
-  <div>Page No : <span style="font-size: 16px; font-weight: bold;">1</span></div>
-</div>
+            <div style="text-align: right; font-size: 12px; margin-top: 6px;">
+             <div>පිටු අංකය</div>
+             <div>Page No : <span style="font-size: 12px; font-weight: bold;">1</span></div>
+            </div>
           </div>
         </div>
       </div>
