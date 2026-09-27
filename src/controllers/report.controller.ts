@@ -813,36 +813,36 @@ export const generateEPFCForm = async (req: AuthRequest, res: Response): Promise
       <!-- Footer Section -->
       <div class="footer-section">
   <div style="display: flex; justify-content: space-between; gap: 20px; margin-bottom: 10px;">
-    <div style="flex: 1; font-size: 12px;">
+    <div style="flex: 1; font-size: 10px;">
       ඉහත සඳහන් විස්තර නිවැරදි බව සහතික කරමි.<br/>
       I certify that the information given above is correct.
     </div>
-    <div style="flex: 1; font-size: 12px;">
+    <div style="flex: 1; font-size: 10px;">
       චෙක්පත පිටුපස සේ.අ.අ. සේව්‍යය අංකය ලියන්න.<br/>
       Please write Employer's EPF Registration Number on the reverse of the cheque
     </div>
   </div>
-  <div style="display: flex; justify-content: space-between; margin-top: 14px;">
+  <div style="display: flex; justify-content: space-between; margin-top: 10px;">
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div class="signature-line"></div>
       <p style="margin-top: 3px; font-weight: bold; text-align: center; font-size: 10px;">සේව්‍යයාගේ අත්සන / Signature of Employer</p>
       <p style="margin-top: 0px; text-align: center; font-size: 10px;">දුරකථන අංකය / Telephone No.</p>
     </div>
-    <div style="text-align: right; font-size: 9px;">
+    <div style="text-align: right; font-size: 9px; space-between">
       <table style="margin-left: auto; border-collapse: collapse;">
-    <tr>
-      <td style="margin-right:10px;">Telephone : ${company.telephone}</td>
-      <td style="padding: 1px 0;">ටෙලිෆෝන්</td>
-    </tr>
-    <tr>
-      <td style="margin-right:10px;">Fax : ${company.fax}</td>
-      <td style="padding: 1px 0;">ෆැක්ස් :</td>
-    </tr>
-    <tr>
-      <td style="margin-right:18px;">E - mail</td>
-    </tr>
-  </table>
-</div>
+      <tr>
+        <td style="margin-right:10px;">Telephone : ${company.telephone}</td>
+        <td style="padding: 1px 0;">ටෙලිෆෝන්</td>
+      </tr>
+      <tr>
+        <td style="margin-right:10px;">Fax : ${company.fax}</td>
+        <td style="padding: 1px 0;">ෆැක්ස් :</td>
+      </tr>
+      <tr>
+        <td style="margin-right:18px;">E - mail</td>
+      </tr>
+      </table>
+    </div>
   </div>
 </div>
 
